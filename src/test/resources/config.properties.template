@@ -1,0 +1,15 @@
+# Target API
+base.url=https://restful-booker.herokuapp.com
+
+# Admin credentials for POST /auth token generation
+admin.username=REPLACE_WITH_USERNAME
+admin.password=REPLACE_WITH_PASSWORD
+
+# SLA thresholds in milliseconds — tests fail if breached
+sla.response.time.ms=2000
+sla.auth.response.time.ms=3000
+
+# OWASP ZAP passive scan — set true when ZAP is running locally
+zap.enabled=false
+zap.proxy.host=localhost
+zap.proxy.port=8080
