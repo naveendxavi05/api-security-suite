@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--
+  P2 — API + Security Suite — TestNG Configuration
+  ══════════════════════════════════════════════════
+  Groups:
+    smoke      → Auth + core happy path — runs on every push
+    regression → Full CRUD suite — runs nightly
+    negative   → Adversarial input tests
+    security   → SQLi / XSS / injection tests
+    auth       → Auth token tests
+-->
+
+<suite name="P2 — API + Security Suite" parallel="classes" thread-count="3" verbose="1">
+
+    <!-- Smoke — fast feedback on every push -->
+    <test name="Smoke — Core API Paths">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="auth"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.naveen.api.tests.auth.AuthTest"/>
+        </classes>
+    </test>
+
+    <!-- Full Regression — nightly -->
+    <test name="Regression — Full Suite">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+                <include name="negative"/>
+                <include name="security"/>
+                <include name="auth"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.naveen.api.tests.auth.AuthTest"/>
+        </classes>
+    </test>
+
+</suite>
