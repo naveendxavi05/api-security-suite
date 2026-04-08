@@ -12,7 +12,8 @@
     auth       → Auth token tests
 -->
 
-<suite name="P2 — API + Security Suite" parallel="classes" thread-count="3" verbose="1">
+<suite name="P2 — API + Security Suite" parallel="false" thread-count="1" verbose="1">
+
 
     <!-- Smoke — fast feedback on every push -->
     <test name="Smoke — Core API Paths">
@@ -40,6 +41,9 @@
         </groups>
         <classes>
             <class name="com.naveen.api.tests.auth.AuthTest"/>
+            <class name="com.naveen.api.tests.booking.BookingCrudTest"/>
+            <!--<class name="com.naveen.api.tests.negative.NegativeTest"/>
+            <class name="com.naveen.api.tests.security.SecurityTest"/>-->
         </classes>
     </test>
 
