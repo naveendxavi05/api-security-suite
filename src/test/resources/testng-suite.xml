@@ -46,5 +46,11 @@
             <!--<class name="com.naveen.api.tests.security.SecurityTest"/>-->
         </classes>
     </test>
+    <!-- BDD — Cucumber scenarios -->
+    <test name="BDD — Cucumber Scenarios">
+        <classes>
+            <class name="com.naveen.api.bdd.runner.CucumberRunner"/>
+        </classes>
+    </test>
 
 </suite>
