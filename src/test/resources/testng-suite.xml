@@ -42,8 +42,8 @@
         <classes>
             <class name="com.naveen.api.tests.auth.AuthTest"/>
             <class name="com.naveen.api.tests.booking.BookingCrudTest"/>
-            <!--<class name="com.naveen.api.tests.negative.NegativeTest"/>
-            <class name="com.naveen.api.tests.security.SecurityTest"/>-->
+            <class name="com.naveen.api.tests.booking.NegativeTest"/>
+            <!--<class name="com.naveen.api.tests.security.SecurityTest"/>-->
         </classes>
     </test>
 
